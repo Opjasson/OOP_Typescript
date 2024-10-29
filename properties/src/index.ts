@@ -15,3 +15,21 @@ const pajero = new Car("Pajero",15000);
 pajero.harga = 20000;
 
 console.log(pajero)
+
+// Default value
+
+class Makanan {
+    nama : string = "nasi goreng";
+    harga : number;
+
+    
+    constructor(harga: number){
+        this.harga = harga
+        // this untuk mengakses property class
+        // bisa langsung mencetak properti didalam constructor langsung
+        console.log("Nama makanan " + this.nama + " Harga " + harga)
+    }
+}
+
+const pesan = new Makanan(20000)
+console.log(pesan)

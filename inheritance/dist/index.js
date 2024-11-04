@@ -1,6 +1,6 @@
 "use strict";
 // Inheritance
-class Employee {
+class Template {
     constructor(firstName, lastName, job) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -10,10 +10,7 @@ class Employee {
         return `Hallo nama saya ${this.firstName} ${this.lastName} saya sebagai ${this.job}`;
     }
 }
-class Manager extends Employee {
-    constructor(firstName, lastName, job) {
-        super(firstName, lastName, job);
-    }
+class Employee extends Template {
 }
-const budi = new Manager("budi", "setiadi", "Manager");
+const budi = new Employee("budi", "setiadi", "Manager");
 console.log(budi.getFullName());
